@@ -8,7 +8,11 @@ const Item = ({ nombre, visto }) => {
 		</li>
 	)
 }
+
 export const ListadoApp = () => {
+	const addTask = () => {
+		setArreglo([...arreglo, { nombre: 'nuevo', visto: false }])
+	}
 	let listadoSecciones = [
 		{ nombre: 'Instalaciones necesarias', visto: true },
 		{ nombre: 'Uso de Vite', visto: true },
@@ -35,6 +39,8 @@ export const ListadoApp = () => {
 					></Item>
 				))}
 			</ol>
+
+			<button onClick={() => addTask()}>Agregar Tarea</button>
 		</>
 	)
 }
