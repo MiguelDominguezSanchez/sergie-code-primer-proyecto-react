@@ -1,8 +1,9 @@
 import { useState } from 'react'
+import { AgregaTarea } from './components/AgregaTarea'
 
 const Item = ({ nombre, visto }) => {
 	return (
-		<li className='rojito'>
+		<li>
 			{nombre}
 			{visto && ' Ok'}
 		</li>
@@ -29,6 +30,7 @@ export const ListadoApp = () => {
 	console.log(arreglo)
 	return (
 		<>
+			<AgregaTarea></AgregaTarea>
 			<h1>Listado de Temas del curso</h1>
 			<ol>
 				{arreglo.map((item) => (
@@ -39,8 +41,7 @@ export const ListadoApp = () => {
 					></Item>
 				))}
 			</ol>
-
-			<button onClick={() => addTask()}>Agregar Tarea</button>
+			{/* <button onClick={() => addTask()}>Agregar Tarea</button> */}
 		</>
 	)
 }
