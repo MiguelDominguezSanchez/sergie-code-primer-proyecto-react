@@ -6,13 +6,8 @@ export const AgregaTarea = ({ agregarTarea }) => {
 		setInputValue(event.target.value)
 	}
 	const onSubmit = (event) => {
-		const envio = {
-			nombre: inputValue,
-			visto: false,
-		}
 		event.preventDefault()
-		// console.log(inputValue)
-		agregarTarea((tareas) => [...tareas, envio])
+		agregarTarea(inputValue)
 	}
 	return (
 		<form onSubmit={onSubmit}>
