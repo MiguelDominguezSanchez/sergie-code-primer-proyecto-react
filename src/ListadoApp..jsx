@@ -11,9 +11,9 @@ const Item = ({ nombre, visto }) => {
 }
 
 export const ListadoApp = () => {
-	const addTask = () => {
-		setArreglo([...arreglo, { nombre: 'nuevo', visto: false }])
-	}
+	// const addTask = () => {
+	// 	setArreglo([...arreglo, { nombre: 'nuevo', visto: false }])
+	// }
 	let listadoSecciones = [
 		{ nombre: 'Instalaciones necesarias', visto: true },
 		{ nombre: 'Uso de Vite', visto: true },
@@ -30,7 +30,7 @@ export const ListadoApp = () => {
 	console.log(arreglo)
 	return (
 		<>
-			<AgregaTarea></AgregaTarea>
+			<AgregaTarea agregarTarea={setArreglo}></AgregaTarea>
 			<h1>Listado de Temas del curso</h1>
 			<ol>
 				{arreglo.map((item) => (
