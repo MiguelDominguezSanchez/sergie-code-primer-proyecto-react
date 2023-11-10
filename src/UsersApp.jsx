@@ -10,7 +10,7 @@ export const UsersApp = () => {
 
 	return (
 		<>
-			<h1>CPS Cmrs List: </h1>
+			<h1>Cmrs List: </h1>
 			<UserList endPoint={endPoint}></UserList>
 			<button onClick={handleFetch}>Here the API Cmrs cases are called</button>
 		</>
